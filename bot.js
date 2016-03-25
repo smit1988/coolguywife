@@ -103,9 +103,8 @@ function respond() {
   } 
   else if(request.text && botDuck.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(testnumber);
     testnumber++;
-    postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
+    postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif"+testnumber);
     this.res.end();
   }
   else if(request.text && botRegexCC.test(request.text)) {
