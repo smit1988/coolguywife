@@ -127,7 +127,7 @@ function respond() {
     function rand(){
       return Math.floor(Math.random() * 10);
     }
-    postMessage("http://comps.canstockphoto.com/can-stock-photo_csp"+Math.floor(Math.random() * 8)+rand()+rand()+rand()+rand()+rand()+rand()+".jpg");
+    postMessage("http://comps.canstockphoto.com/can-stock-photo_csp"+(Math.floor(Math.random() * 7) + 1)+rand()+rand()+rand()+rand()+rand()+rand()+".jpg");
     this.res.end();
   }
   else if(request.text && botRegexDie.test(request.text)) {
