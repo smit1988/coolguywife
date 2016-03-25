@@ -3,6 +3,16 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
+var ryanQuotes = ["Excited",
+                    "Kk",
+                    "It said my message twice in one message, I mean",
+                    "Why did it repeat my message",
+                    "Is it supposed to store different messages and repeat more than one?",
+                    "What's the memory on those messages I wonder",
+                    "I'm just here for the memes",
+                    "Noah Smith, what a damn good fella","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""];
+  
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegexExams = /^\/exams/;  botRegexKiss = /^\/kiss/;  botRegexBurn = /^\/burn/;  botRegex = /^\/cool guy/;  botRegexBall = /^\/8ball/;  botRegexSpook = /^\/spooky/;  botRegexDie = /^\/roll a die/;  botRegexMeme = /^\/meme/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
@@ -11,14 +21,6 @@ function respond() {
       botRegexRyanPurge = /^\/purge/;  botRegexSiege = /^\/siege/;  botRegexStock = /^\/stock/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
-  var ryanQuotes = ["Excited",
-                    "Kk",
-                    "It said my message twice in one message, I mean",
-                    "Why did it repeat my message",
-                    "Is it supposed to store different messages and repeat more than one?",
-                    "What's the memory on those messages I wonder",
-                    "I'm just here for the memes",
-                    "Noah Smith, what a damn good fella","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""];
   var mockQuotes = ["911 What is your emergency?",
                     "With nowhere else to turn, he got on his knees and prayed",
                     "He was happy to answer the little girl's question. He bent down and said to her",
