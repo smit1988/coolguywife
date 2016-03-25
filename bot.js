@@ -165,20 +165,20 @@ function respond() {
   else if(request.name == "Ryan Sharkey") {
     this.res.writeHead(200);
     var ryanAction = Math.random();
-    if((ryanAction <= 0.015) && (ryanAction > 0.012)){
+    if((ryanAction <= 0.15) && (ryanAction > 0.12)){
       postMessage("Test1"+mock);
     }
-    else if ((ryanAction <= 0.012) && (ryanAction > 0.009)){
+    else if ((ryanAction <= 0.12) && (ryanAction > 0.09)){
       mock = request.text;
       postMessage("Test2");
     }
-    else if ((ryanAction <= 0.009) && (ryanAction > 0.006)){
+    else if ((ryanAction <= 0.09) && (ryanAction > 0.06)){
       postMessage("Ryan is undoot\nType /meme to doot Ryan");
     }
-    else if ((ryanAction <= 0.006) && (ryanAction > 0.003)){
+    else if ((ryanAction <= 0.06) && (ryanAction > 0.03)){
       postMessage("Ryan Sharkey? More like Ryan ShLAMEkey\nType /burn to put Ryan in his place");
     }
-    else if (ryanAction <= 0.003){
+    else if (ryanAction <= 0.03){
       postMessage("Woah, do you kiss your motherboard with that mouth?\nType /kiss to kiss Ryan's motherboard");
     }
     else {}
