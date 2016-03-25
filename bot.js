@@ -3,6 +3,8 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
+var testnumber = 0;
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegexExams = /^\/exams/;  botRegexKiss = /^\/kiss/;  botRegexBurn = /^\/burn/;  botRegex = /^\/cool guy/;  botRegexBall = /^\/8ball/;  botRegexSpook = /^\/spooky/;  botRegexDie = /^\/roll a die/;  botRegexMeme = /^\/meme/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
@@ -15,7 +17,8 @@ function respond() {
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
   
-  
+  postMessage(testnumber);
+  testnumber++;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -163,13 +166,13 @@ function respond() {
   else if(request.name == "Ryan Sharkey") {
     this.res.writeHead(200);
     var ryanAction = Math.random();
-    if((ryanAction <= 0.09) && (ryanAction > 0.06)){
+    if((ryanAction <= 0.009) && (ryanAction > 0.006)){
       postMessage("Ryan is undoot\nType /meme to doot Ryan");
     }
-    else if ((ryanAction <= 0.06) && (ryanAction > 0.03)){
+    else if ((ryanAction <= 0.006) && (ryanAction > 0.003)){
       postMessage("Ryan Sharkey? More like Ryan ShLAMEkey\nType /burn to put Ryan in his place");
     }
-    else if (ryanAction <= 0.03){
+    else if (ryanAction <= 0.003){
       postMessage("Woah, do you kiss your motherboard with that mouth?\nType /kiss to kiss Ryan's motherboard");
     }
     else {}
