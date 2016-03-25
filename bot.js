@@ -166,11 +166,10 @@ function respond() {
     this.res.writeHead(200);
     var ryanAction = Math.random();
     if((ryanAction <= 0.15) && (ryanAction > 0.12)){
-      postMessage("Test1"+mock);
+      postMessage(""+mock);
     }
     else if ((ryanAction <= 0.12) && (ryanAction > 0.09)){
       mock = request.text;
-      postMessage("Test2");
     }
     else if ((ryanAction <= 0.09) && (ryanAction > 0.06)){
       postMessage("Ryan is undoot\nType /meme to doot Ryan");
