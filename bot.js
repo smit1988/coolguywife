@@ -3,7 +3,7 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
-var testnumber = 0;
+var mock = "";
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
@@ -103,8 +103,7 @@ function respond() {
   } 
   else if(request.text && botDuck.test(request.text)) {
     this.res.writeHead(200);
-    testnumber++;
-    postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif"+testnumber);
+    postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
     this.res.end();
   }
   else if(request.text && botRegexCC.test(request.text)) {
@@ -166,7 +165,14 @@ function respond() {
   else if(request.name == "Ryan Sharkey") {
     this.res.writeHead(200);
     var ryanAction = Math.random();
-    if((ryanAction <= 0.009) && (ryanAction > 0.006)){
+    if((ryanAction <= 0.015) && (ryanAction > 0.012)){
+      postMessage("Test1"+mock);
+    }
+    else if ((ryanAction <= 0.012) && (ryanAction > 0.009)){
+      mock = request.text;
+      postMessage("Test2");
+    }
+    else if ((ryanAction <= 0.009) && (ryanAction > 0.006)){
       postMessage("Ryan is undoot\nType /meme to doot Ryan");
     }
     else if ((ryanAction <= 0.006) && (ryanAction > 0.003)){
