@@ -68,10 +68,12 @@ function respond() {
   else if(request.text && botRegexRyanPurge.test(request.text)) {
     this.res.writeHead(200);
     var numbercount = 0;
+    var quotelist = "";
     while(numbercount < 30){
-      postMessage("$~"+ryanQuotes[numbercount]);
+      quotelist = quotelist + "$~" + ryanQuotes[numbercount];
       numbercount++;
     }
+    postMessage(quotelist);
     this.res.end();
   } 
   else if(request.text && botRegexReddit.test(request.text)) {
