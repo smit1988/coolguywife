@@ -165,6 +165,7 @@ function respond() {
   else if(request.name == "Ryan Sharkey") {
     this.res.writeHead(200);
     var ryanAction = Math.random();
+    postMessage(teamAb[0]);
     if((ryanAction <= 0.15) && (ryanAction > 0.12)){
       postMessage("/meme when Ryan's all like '"+mock+"'");
     }
