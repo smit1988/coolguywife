@@ -3,7 +3,7 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
-var mock = "";
+var mock = "look at me I'm Ryan";
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
@@ -166,7 +166,7 @@ function respond() {
     this.res.writeHead(200);
     var ryanAction = Math.random();
     if((ryanAction <= 0.15) && (ryanAction > 0.12)){
-      postMessage(""+mock);
+      postMessage("/meme when Ryan's all like '"+mock+"'");
     }
     else if ((ryanAction <= 0.12) && (ryanAction > 0.09)){
       mock = request.text;
