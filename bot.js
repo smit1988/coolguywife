@@ -54,8 +54,9 @@ function respond() {
   
   var awake = "";
   
-  while(1==1){
-  if(awake != request.text){
+  //while(1==1){
+  //if(awake != request.text){
+  if(1==1){
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -243,7 +244,7 @@ function respond() {
   }
   awake = request.text;
   }//if awake
-  }//while
+  //}//while
 }
 
 function postMessage(response) {
