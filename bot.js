@@ -244,7 +244,6 @@ function respond() {
   awake = request.text;
   //}//if awake
   //}//while
-  respond();
 }
 
 function postMessage(response) {
