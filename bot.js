@@ -52,7 +52,10 @@ function respond() {
                     "Where was the last page of his notes? He hadn't memorized the speech. He stood there in silence in front of the entire UN. He was going to have to improvise his closing.\n'In summary...'",
                     "He woke up next to a strange woman in his bed. Or is it her bed? Definitely her bed. Oh god she's hideous, better bounce. He looked for a piece of paper to leave a note. He didn't even know this woman, what should he write? Oh good her ID. Susie? Okay well here it goes.\n'Dear Susie...'"];
   
+  var awake = "";
   
+  while(true){
+  if(awake != request.text){
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -238,8 +241,9 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  
-  
+  awake = request.text;
+  }//if awake
+  }//while
 }
 
 function postMessage(response) {
