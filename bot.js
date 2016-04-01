@@ -53,7 +53,7 @@ var catFacts = ["Cats are the most popular pet in the United States: There are 8
 "Abraham Lincoln kept four cats in the White House. ",
 "When asked if her husband had any hobbies, Mary Todd Lincoln is said to have replied ‘cats.’ ",
 "Isaac Newton is credited with inventing the cat door. ",
-"One legend claims that cats were created when a lion on Noah’s Ark sneezedand two kittens came out. "],
+"One legend claims that cats were created when a lion on Noah’s Ark sneezedand two kittens came out. ",
 "A cat can jump up to six times its length. ",
 "A house cat is faster than Usain Bolt. ",
 "When cats leave their poop uncovered, it is a sign of aggression to let you know they don’t fear you. ",
