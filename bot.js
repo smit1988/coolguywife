@@ -47,20 +47,20 @@ var catFacts = ["Cats are the most popular pet in the United States: There are 8
 "It was illegal to slay cats in ancient Egypt, in large part because they provided the great service of controlling the rat population. ",
 "In the 15th century, Pope Innocent VIII began ordering the killing of cats, pronouncing them demonic. ",
 "A cat has five toes on his front paws, and four on the back, unless he’s a polydactyl. ",
-"Polydactyl cats are also referred to as "Hemingway cats" because the author was so fond of them. ",
+"Polydactyl cats are also referred to as 'Hemingway cats' because the author was so fond of them. ",
 "There are 45 Hemingway cats living at the author’s former home in Key West, Fla. ",
 "Original kitty litter was made out of sand but it was replaced by more absorbent clay in 1948. ",
 "Abraham Lincoln kept four cats in the White House. ",
 "When asked if her husband had any hobbies, Mary Todd Lincoln is said to have replied ‘cats.’ ",
 "Isaac Newton is credited with inventing the cat door. ",
-"One legend claims that cats were created when a lion on Noah’s Ark sneezedand two kittens came out. "];/*,
+"One legend claims that cats were created when a lion on Noah’s Ark sneezedand two kittens came out. "],
 "A cat can jump up to six times its length. ",
 "A house cat is faster than Usain Bolt. ",
 "When cats leave their poop uncovered, it is a sign of aggression to let you know they don’t fear you. ",
 "Cats can change their meow to manipulate a human. They often imitate a human baby when they need food, for example. ",
 "Cats use their whiskers to detect if they can fit through a space. ",
 "Cats only sweat through their foot pads. ",
-"The first cat in space was French. She was named Felicette, or "Astrocat." She survived the trip. ",
+"The first cat in space was French. She was named Felicette, or 'Astrocat.'' She survived the trip. ",
 "Cats have free-floating clavicle bones that attach their shoulders to their forelimbs, which allows them to squeeze through very small spaces. ",
 "Hearing is the strongest of cat’s senses: They can hear sounds as high as 64 kHz — compared with humans, who can hear only as high as 20 kHz. ",
 "Cats can move their ears 180 degrees. ",
@@ -94,7 +94,7 @@ var catFacts = ["Cats are the most popular pet in the United States: There are 8
 "Cats are really cool. ",
 "They are also very soft. ",
 "If you want to adopt a cat, you can visit your local Humane Society or check outpetfinder.com."
-];*/
+];
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegexExams = /^\/exams/;  botRegexKiss = /^\/kiss/;  botRegexBurn = /^\/burn/;  botRegex = /^\/cool guy/;  botRegexBall = /^\/8ball/;  botRegexSpook = /^\/spooky/;  botRegexDie = /^\/roll a die/;  botRegexMeme = /^\/meme/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
@@ -140,7 +140,7 @@ function respond() {
   //if(awake != request.text){
   if(request.name != "cat facts"){
     this.res.writeHead(200);
-    postMessage(catFacts[/*Math.floor(Math.random() * 82)*/0]);
+    postMessage(catFacts[Math.floor(Math.random() * 82)]);
     this.res.end();
   }
   else if(request.text && botRegex.test(request.text)) {
