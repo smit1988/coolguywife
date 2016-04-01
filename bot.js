@@ -12,7 +12,7 @@ var ryanQuotes = ["Excited",
                     "I'm just here for the memes",
                     "Noah Smith, what a damn good fella","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""];
   
-var catFacts = ["Cats are the most popular pet in the United States: There are 88 million pet cats and 74 million dogs."];/*,
+var catFacts = ["Cats are the most popular pet in the United States: There are 88 million pet cats and 74 million dogs.",
 "There are cats who have survived falls from over 32 stories (320 meters) onto concrete. ",
 "A group of cats is called a clowder. ",
 "Cats have over 20 muscles that control their ears. ",
@@ -53,7 +53,7 @@ var catFacts = ["Cats are the most popular pet in the United States: There are 8
 "Abraham Lincoln kept four cats in the White House. ",
 "When asked if her husband had any hobbies, Mary Todd Lincoln is said to have replied ‘cats.’ ",
 "Isaac Newton is credited with inventing the cat door. ",
-"One legend claims that cats were created when a lion on Noah’s Ark sneezedand two kittens came out. ",
+"One legend claims that cats were created when a lion on Noah’s Ark sneezedand two kittens came out. "];/*,
 "A cat can jump up to six times its length. ",
 "A house cat is faster than Usain Bolt. ",
 "When cats leave their poop uncovered, it is a sign of aggression to let you know they don’t fear you. ",
