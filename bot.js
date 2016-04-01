@@ -140,7 +140,7 @@ function respond() {
   //if(awake != request.text){
   if(request.name != "cat facts"){
     this.res.writeHead(200);
-    postMessage(catFacts[Math.floor(Math.random() * 82)]);
+    postMessage(catFacts[/*Math.floor(Math.random() * 82)*/0]);
     this.res.end();
   }
   else if(request.text && botRegex.test(request.text)) {
