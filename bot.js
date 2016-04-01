@@ -12,7 +12,7 @@ var ryanQuotes = ["Excited",
                     "I'm just here for the memes",
                     "Noah Smith, what a damn good fella","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""];
   
-var catFacts = [“Cats are the most popular pet in the United States: There are 88 million pet cats and 74 million dogs.”,
+/*var catFacts = [“Cats are the most popular pet in the United States: There are 88 million pet cats and 74 million dogs.”,
 “There are cats who have survived falls from over 32 stories (320 meters) onto concrete. ”,
 “A group of cats is called a clowder. ”,
 “Cats have over 20 muscles that control their ears. ”,
@@ -94,7 +94,7 @@ var catFacts = [“Cats are the most popular pet in the United States: There are
 “Cats are really cool. ”,
 “They are also very soft. ”,
 “If you want to adopt a cat, you can visit your local Humane Society or check outpetfinder.com.”
-];
+];*/
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegexExams = /^\/exams/;  botRegexKiss = /^\/kiss/;  botRegexBurn = /^\/burn/;  botRegex = /^\/cool guy/;  botRegexBall = /^\/8ball/;  botRegexSpook = /^\/spooky/;  botRegexDie = /^\/roll a die/;  botRegexMeme = /^\/meme/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
@@ -140,7 +140,7 @@ function respond() {
   //if(awake != request.text){
   if(request.name != "cat facts"){
     this.res.writeHead(200);
-    postMessage(catFacts[Math.floor(Math.random() * 82)]);
+    postMessage(/*catFacts[Math.floor(Math.random() * 82)]*/"Test");
     this.res.end();
   }
   else if(request.text && botRegex.test(request.text)) {
