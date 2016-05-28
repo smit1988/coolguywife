@@ -88,13 +88,7 @@ function respond() {
   }   
   else if(request.text && botRegexSpam.test(request.text)) {
     this.res.writeHead(200);
-    spamcount++;
-    if(spamcount >= 100){
-      postMessage("100 /spam we did it!💯💯💯");
-    }
-    else{
-      postMessage("/spam " + spamcount);
-    }
+    postMessage(request.name + " has been banned for conspiracy to commit /spam");
     this.res.end();
   }   
   else if(request.text && botRegexPraise.test(request.text)) {
