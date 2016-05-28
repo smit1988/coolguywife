@@ -89,7 +89,12 @@ function respond() {
   else if(request.text && botRegexSpam.test(request.text)) {
     this.res.writeHead(200);
     spamcount++;
-    postMessage("/spam " + spamcount);
+    if(spamcount >= 100){
+      postMessage("100 /spam we did it!");
+    }
+    else{
+      postMessage("/spam " + spamcount);
+    }
     this.res.end();
   }   
   else if(request.text && botRegexPraise.test(request.text)) {
