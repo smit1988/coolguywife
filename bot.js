@@ -90,7 +90,7 @@ function respond() {
     this.res.writeHead(200);
     spamcount++;
     if(spamcount >= 100){
-      postMessage("100 /spam we did it!");
+      postMessage("100 /spam we did it!💯💯💯");
     }
     else{
       postMessage("/spam " + spamcount);
