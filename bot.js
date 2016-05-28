@@ -2,6 +2,7 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
+var spamcount = 0;
 
 var ryanQuotes = ["Excited",
                     "Kk",
@@ -87,7 +88,8 @@ function respond() {
   }   
   else if(request.text && botRegexSpam.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("/spam");
+    spamcount++;
+    postMessage("/spam" + spamcount);
     this.res.end();
   }   
   else if(request.text && botRegexPraise.test(request.text)) {
