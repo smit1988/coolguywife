@@ -198,6 +198,7 @@ function respond() {
   else if(request.text && botRegexDie.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
+    req = req.charAt(0).toUpperCase() + req.slice(1);
     postMessage(req + "was rolled");
     this.res.end();
   }
