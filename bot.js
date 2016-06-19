@@ -198,7 +198,7 @@ function respond() {
   else if(request.text && botRegexDie.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
-    postMessage(req + " was rolled");
+    postMessage(req + "was rolled");
     this.res.end();
   }
   else if(request.text && botRegexCoin.test(request.text)) {
