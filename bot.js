@@ -15,7 +15,7 @@ var ryanQuotes = ["Excited",
   
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexExams = /^\/exams/;  botRegexKiss = /^\/kiss/;  botRegexBurn = /^\/burn/;  botRegex = /^\/cool guy/;  botRegexBall = /^\/8ball/;  botRegexSpook = /^\/spooky/; botRegexRoll = /^\/roll \/roll/;  botRegexDie = /^\/roll/;  botRegexCoin = /^\/flip a coin/; botRegexMeme = /^\/meme/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+      botRegexExams = /^\/exams/;  botRegexKiss = /^\/kiss/;  botRegexBurn = /^\/burn/;  botRegex = /^\/cool guy/;  botRegexBall = /^\/8ball/;  botRegexSpook = /^\/spooky/; botRegexDie = /^\/roll/;  botRegexCoin = /^\/flip a coin/; botRegexMeme = /^\/meme/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
       botRegexReddit = /^\/reddit/;  botRegexPraise = /^\/praise cool guy/;  botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexRyan = /^\/ryan/; botRegexSpam = /^\/spam/;  botRegexRyan2 = /^\/Ryan/;  botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexRyanPurge = /^\/purge/;  botRegexSiege = /^\/siege/;  botRegexStock = /^\/stock/;
@@ -194,12 +194,14 @@ function respond() {
     }
     postMessage("http://comps.canstockphoto.com/can-stock-photo_csp"+Math.floor(Math.random() * 8)+rand()+rand()+rand()+rand()+rand()+rand()+".jpg");
     this.res.end();
-  }   
+  } 
+  /*
   else if(request.text && botRegexRoll.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request.name + " has been banned for /rolling https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     this.res.end();
   }
+  */
   else if(request.text && botRegexDie.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
