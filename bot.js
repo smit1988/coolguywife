@@ -195,13 +195,11 @@ function respond() {
     postMessage("http://comps.canstockphoto.com/can-stock-photo_csp"+Math.floor(Math.random() * 8)+rand()+rand()+rand()+rand()+rand()+rand()+".jpg");
     this.res.end();
   } 
-  /*
   else if(request.text && botRegexRoll.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request.name + " has been banned for /rolling https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     this.res.end();
   }
-  */
   else if(request.text && botRegexDie.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
