@@ -57,37 +57,37 @@ function respond() {
   //while(1==1){
   //if(awake != request.text){
   
-  if(request.text && botRegex.test("test")) {
+  if(request.text == "test") {
     this.res.writeHead(200);
     postMessage(">The office lunch hour was a simple, sacred tradition.");
     this.res.end();
   } 
-  else if(request.text && botRegexRyanPurge.test("test")) {
+  else if(request.text == "test") {
     this.res.writeHead(200);
     postMessage(">Until one day...");
     this.res.end();
   } 
-  else if(request.text && botRegexReddit.test("test")) {
+  else if(request.text == "test") {
     this.res.writeHead(200);
     postMessage(">There was only one man up to the task. Except for one thing...he wasn't a man.");
     this.res.end();
   }   
-  else if(request.text && botRegexSpam.test("test")) {
+  else if(request.text == "test") {
     this.res.writeHead(200);
     postMessage(">This lunch hour...");
     this.res.end();
   }   
-  else if(request.text && botRegexPraise.test("test")) {
+  else if(request.text == "test") {
     this.res.writeHead(200);
     postMessage(">With award winning actor Sergio Marchionne");
     this.res.end();
   }  
-  else if(request.text && botRegexExams.test("test")) {
+  else if(request.text == "test") {
     this.res.writeHead(200);
     postMessage(">And nobel prize winner Ray Decarlo");
     this.res.end();
   }  
-  else if(request.text && botRegexSalt.test("test")) {
+  else if(request.text == "test") {
     this.res.writeHead(200);
     postMessage(">'Revenge is a dish best served at 11:30'\nratedNC17forgratuitousnudity");
     this.res.end();
