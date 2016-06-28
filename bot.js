@@ -15,10 +15,10 @@ var ryanQuotes = ["Excited",
   
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexExams = /^\/*beeeeeeeep booooooop!!!*/;  botRegexKiss = /^\/kiss/;  botRegexBurn = /^\/burn/;  botRegex = /^\/11:30/;  botRegexBall = /^\/8ball/;  botRegexSpook = /^\/spooky/; botRegexRoll = /^\/roll \/roll/;  botRegexDie = /^\/roll/;  botRegexCoin = /^\/flip a coin/; botRegexMeme = /^\/meme/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/*riding shark* You forgot one thing, Big Boss Man Guy. Sharks only kill one person every two years...and they didn't kill anyone last year. *sunglasses materialize as the shark army lunges toward Big Boss Man Guy*/;botRegexRules = /^\/rules/
-      botRegexReddit = /^\/I have a meeting at 12./;  botRegexPraise = /^\/*angry beep boop*/;  botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexRyan = /^\/ryan/; botRegexSpam = /^\/💥💥💥EXPLOSIONS💥💥💥/;  botRegexRyan2 = /^\/Ryan/;  botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexRyanPurge = /^\/11:30, time to go to lunch!/;  botRegexSiege = /^\/siege/;  botRegexStock = /^\/stock/;
+      botRegexExams = /^\/exams/;  botRegexKiss = /^\/kiss/;  botRegexBurn = /^\/burn/;  botRegex = /^\/cool guy/;  botRegexBall = /^\/8ball/;  botRegexSpook = /^\/spooky/; botRegexRoll = /^\/roll \/roll/;  botRegexDie = /^\/roll/;  botRegexCoin = /^\/flip a coin/; botRegexMeme = /^\/meme/; botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+      botRegexReddit = /^\/reddit/;  botRegexPraise = /^\/praise cool guy/;  botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+      botRegexRyan = /^\/ryan/; botRegexSpam = /^\/spam/;  botRegexRyan2 = /^\/Ryan/;  botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
+      botRegexRyanPurge = /^\/purge/;  botRegexSiege = /^\/siege/;  botRegexStock = /^\/stock/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
       siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
   var mockQuotes = ["911 What is your emergency?",
@@ -58,37 +58,7 @@ function respond() {
   //if(awake != request.text){
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(">The office lunch hour was a simple, sacred tradition.");
-    this.res.end();
-  } 
-  else if(request.text && botRegexRyanPurge.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage(">Until one day...");
-    this.res.end();
-  } 
-  else if(request.text && botRegexReddit.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage(">There was only one man up to the task. Except for one thing...he wasn't a man.");
-    this.res.end();
-  }   
-  else if(request.text && botRegexSpam.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage(">This lunch hour...");
-    this.res.end();
-  }   
-  else if(request.text && botRegexPraise.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage(">With award winning actor Sergio Marchionne");
-    this.res.end();
-  }  
-  else if(request.text && botRegexExams.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage(">And nobel prize winner Ray Decarlo");
-    this.res.end();
-  }  
-  else if(request.text && botRegexSalt.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage(">'Revenge is a dish best served at 11:30'\nratedNC17forgratuitousnudity");
+    postMessage(cool());
     this.res.end();
   } 
     else {}
