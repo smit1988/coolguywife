@@ -57,39 +57,9 @@ function respond() {
   //while(1==1){
   //if(awake != request.text){
   
-  if(request.text == "11:30") {
+  if(request.text == ">This lunch hour...") {
     this.res.writeHead(200);
-    postMessage(">The office lunch hour was a simple, sacred tradition.");
-    this.res.end();
-  } 
-  else if(request.text == "11:30, time to go to lunch!") {
-    this.res.writeHead(200);
-    postMessage(">Until one day...");
-    this.res.end();
-  } 
-  else if(request.text == "I have a meeting at 12.") {
-    this.res.writeHead(200);
-    postMessage(">There was only one man up to the task. Except for one thing...he wasn't a man.");
-    this.res.end();
-  }   
-  else if(request.text == "💥💥💥EXPLOSIONS💥💥💥") {
-    this.res.writeHead(200);
-    postMessage(">This lunch hour...");
-    this.res.end();
-  }   
-  else if(request.text == "*angry beep boop*") {
-    this.res.writeHead(200);
-    postMessage(">With award winning actor Sergio Marchionne");
-    this.res.end();
-  }  
-  else if(request.text == "*beeeeeeeep booooooop!!!*") {
-    this.res.writeHead(200);
-    postMessage(">And nobel prize winner Ray Decarlo");
-    this.res.end();
-  }  
-  else if(request.text == "*riding shark* You forgot one thing, Big Boss Man Guy. Sharks only kill one person every two years...and they didn't kill anyone last year. *sunglasses materialize as the shark army lunges toward Big Boss Man Guy*") {
-    this.res.writeHead(200);
-    postMessage(">'Revenge is a dish best served at 11:30'\nratedNC17forgratuitousnudity");
+    postMessage("You can't go up against Big Boss Man Guy again, you know what happened last time.");
     this.res.end();
   } 
   else if(request.text && botRegex.test(request.text)) {
